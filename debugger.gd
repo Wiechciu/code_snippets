@@ -1,7 +1,7 @@
 ## debugger.gd
 class_name Debugger
 
-## This function checks all exported properties of a Node to see if there are any unassigned.
+## This function checks all exported properties of a Node to see if there are any unassigned in the editor.
 ## If there are unassigned properties, it will run into an error and pause the editor.
 static func assert_all_exported_properties(node: Node) -> void:
 	var property_list := (node.get_script() as Script).get_script_property_list()
@@ -24,5 +24,5 @@ var not_exported_property_bool: bool
 
 func _ready() -> void:
 	## This call will check the 3 exported properties of type: Node, PackedScene and bool.
-	## If the Node or PackedScene properties have not been assigned, it will run into an error and pause the editor.
+	## If the Node or PackedScene properties have not been assigned in the editor, it will run into an error and pause the editor.
 	Debugger.assert_all_exported_properties(self)
