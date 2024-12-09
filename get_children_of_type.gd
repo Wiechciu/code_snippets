@@ -3,6 +3,7 @@ class_name UtilityClass
 
 
 ## Returns all children of given type.
+## The returned Array is untyped, so it has to be assigned to a typed array later - see example usage below.
 static func get_children_of_type(parent: Node, type: Variant) -> Array:
 	var array: Array
 	for child: Node in parent.get_children():
