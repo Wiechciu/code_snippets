@@ -13,6 +13,7 @@ static func get_children_of_type(parent: Node, type: Variant) -> Array:
 
 
 ## Returns the first child of given type, will ignore the other children.
+## The returned Node is untyped, so it has to be casted later - see example usage below.
 static func get_child_of_type(parent: Node, type: Variant) -> Node:
 	if parent == null:
 		return null
