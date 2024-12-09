@@ -25,7 +25,8 @@ static func get_child_of_type(parent: Node, type: Variant) -> Node:
 ## Player.gd
 class_name Player
 func _ready() -> void:
-	var typed_children: Array = get_children_of_type(self, Interactable)
+	var typed_children: Array[Interactable]
+	typed_children.assign(GlobalDebugger.get_children_of_type(self, Interactable))
 	for child: Interactable in typed_children:
 		child.interact()
   
