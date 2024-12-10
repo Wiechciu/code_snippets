@@ -33,7 +33,8 @@ func _ready() -> void:
 		child.interact()
   
 	var first_child_of_type: Interactable = get_child_of_type(self, Interactable) as Interactable
-	first_child_of_type.interact()
+	if first_child_of_type != null:
+		first_child_of_type.interact()
 
 
 ## Interactable.gd
