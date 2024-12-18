@@ -12,6 +12,7 @@ static func assert_all_exported_properties(node: Node) -> void:
 			assert(property_value != null, error_message % [property.name, str(node.get_path())])
 
 
+## Example usage
 ## some_class.gd
 class_name SomeClass
 
