@@ -1,5 +1,5 @@
-## utility_class.gd
-class_name UtilityClass
+## utility_tools.gd
+class_name UtilityTools
 
 
 ## Returns all children of given type.
@@ -28,11 +28,11 @@ static func get_child_of_type(parent: Node, type: Variant) -> Node:
 class_name Player
 func _ready() -> void:
 	var typed_children: Array[Interactable]
-	typed_children.assign(GlobalDebugger.get_children_of_type(self, Interactable))
+	typed_children.assign(UtilityTools.get_children_of_type(self, Interactable))
 	for child: Interactable in typed_children:
 		child.interact()
   
-	var first_child_of_type: Interactable = get_child_of_type(self, Interactable) as Interactable
+	var first_child_of_type: Interactable = UtilityTools.get_child_of_type(self, Interactable) as Interactable
 	if first_child_of_type != null:
 		first_child_of_type.interact()
 
